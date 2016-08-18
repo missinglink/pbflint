@@ -22,6 +22,20 @@ error: way 119134158 invalid refcount 1
 ... etc
 ```
 
+All lint output is sent to `stdout`, debug info and statistics are sent to `stderr`:
+
+```
+$ ./pbflint.linux.bin /data/extract/new-york_new-york.osm.pbf 1>/dev/null
+ErrorCount: 219
+WarningCount: 175311
+TotalNodes: 9191661
+TotalWays: 1512199
+TotalRelations: 8145
+exit status 1
+```
+
+The linter will `exit(1)` if the ErrorCount is greater than 1, it will `exit(2)` on file errors and `exit(0)` otherwise.
+
 ### Run the go code from source
 
 Make sure `Go` is installed and configured on your system, see: https://gist.github.com/missinglink/4212a81a7d9c125b68d9
