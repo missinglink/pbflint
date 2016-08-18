@@ -230,27 +230,21 @@ type metrics struct {
 var isTerminal = terminal.IsTerminal(int(os.Stdout.Fd()))
 
 func (m *metrics) Error(format string, a ...interface{}) {
+	format = "error: " + format
 	if isTerminal {
-		fmt.Fprintf(os.Stderr, "\033[0;31m")
+		format = "\033[0;31m" + format + "\033[0m"
 	}
-	fmt.Fprintf(os.Stdout, "error: ")
 	fmt.Fprintf(os.Stdout, format, a...)
 	m.ErrorCount++
-	if isTerminal {
-		fmt.Fprintf(os.Stderr, "\033[0m")
-	}
 }
 
 func (m *metrics) Warning(format string, a ...interface{}) {
+	format = "warning: " + format
 	if isTerminal {
-		fmt.Fprintf(os.Stderr, "\033[0;33m")
+		format = "\033[0;33m" + format + "\033[0m"
 	}
-	fmt.Fprintf(os.Stdout, "warning: ")
 	fmt.Fprintf(os.Stdout, format, a...)
 	m.WarningCount++
-	if isTerminal {
-		fmt.Fprintf(os.Stderr, "\033[0m")
-	}
 }
 
 func (m *metrics) Print() {
