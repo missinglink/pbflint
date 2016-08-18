@@ -7,7 +7,7 @@ You can download binary the files in `./build` for your architecture:
 
 | linux x64 | osx x64 | windows x64 | arm6 |
 |:-:|:-:|:-:|:-:|
-| build/pbflint.linux.bin | build/pbflint.osx.bin | build/pbflint.exe | build/pbflint.arm6.bin |
+| [build/pbflint.linux.bin](https://github.com/missinglink/pbflint/blob/master/build/pbflint.linux.bin?raw=true) | [build/pbflint.osx.bin](https://github.com/missinglink/pbflint/blob/master/build/pbflint.osx.bin?raw=true) | [build/pbflint.exe](https://github.com/missinglink/pbflint/blob/master/build/pbflint.exe?raw=true) | [build/pbflint.arm6.bin](https://github.com/missinglink/pbflint/blob/master/build/pbflint.arm6.bin?raw=true) |
 
 ### Usage
 
