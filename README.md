@@ -24,7 +24,7 @@ error: way 119134158 invalid refcount 1
 
 All lint output is sent to `stdout`, debug info and statistics are sent to `stderr`:
 
-```
+```bash
 $ ./pbflint.linux.bin /data/extract/new-york_new-york.osm.pbf 1>/dev/null
 ErrorCount: 219
 WarningCount: 175311
@@ -33,6 +33,14 @@ TotalWays: 1512199
 TotalRelations: 8145
 exit status 1
 ```
+
+The warning messages can be quite verbose, you can simply ignore them with a command such as:
+
+```bash
+$ ./pbflint.linux.bin /data/extract/new-york_new-york.osm.pbf | grep -v warning
+```
+
+### Exit codes
 
 The linter will `exit(1)` if the ErrorCount is greater than 1, it will `exit(2)` on file errors and `exit(0)` otherwise.
 
