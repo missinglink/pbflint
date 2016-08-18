@@ -3,7 +3,7 @@ pbflint scans the contents of an openstreetmap PBF extract, checking for errors 
 
 ### Builds
 
-You can download binary the files in `./build` for your architecture:
+You can download ready-to-go binary files for your architecture:
 
 | linux x64 | osx x64 | windows x64 | arm6 |
 |:-:|:-:|:-:|:-:|
